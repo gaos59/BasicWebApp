@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\Proyecto1_GabrielOrtegaSolano\\",
+  "WorkspaceRootPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\proyecto1_gabrielortegasolano\\models\\lavado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:models\\lavado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\proyecto1_gabrielortegasolano\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\proyecto1_gabrielortegasolano.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:proyecto1_gabrielortegasolano.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\Proyecto1_GabrielOrtegaSolano\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\Proyecto1_GabrielOrtegaSolano\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:39:11.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Lavado.cs",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\Proyecto1_GabrielOrtegaSolano\\Models\\Lavado.cs",
-              "RelativeDocumentMoniker": "Models\\Lavado.cs",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\Proyecto1_GabrielOrtegaSolano\\Models\\Lavado.cs",
-              "RelativeToolTip": "Models\\Lavado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:30:16.382Z",
+              "Title": "Proyecto1_GabrielOrtegaSolano",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Proyecto1_GabrielOrtegaSolano.csproj",
+              "RelativeDocumentMoniker": "Proyecto1_GabrielOrtegaSolano.csproj",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Proyecto1_GabrielOrtegaSolano.csproj",
+              "RelativeToolTip": "Proyecto1_GabrielOrtegaSolano.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-17T23:16:34.379Z",
               "EditorCaption": ""
             }
           ]
