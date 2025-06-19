@@ -28,10 +28,11 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // POST: LavadosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Lavado nuevoLavado)
         {
             try
             {
+                lavados.Add(nuevoLavado);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -43,16 +44,35 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: LavadosController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            try
+            {
+                Lavado lavadoEditar = lavados.FirstOrDefault(lavado => lavado.IdLavado == id);
+                return View(lavadoEditar);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // POST: LavadosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Lavado lavadoEditado)
         {
             try
             {
+                Lavado lavadoEditar = lavados.FirstOrDefault(lavado => lavado.IdLavado == lavadoEditado.IdLavado);
+                lavadoEditar.IdLavado = lavadoEditado.IdLavado;
+                lavadoEditar.PlacaVehiculo = lavadoEditado.PlacaVehiculo;
+                lavadoEditar.IdCliente = lavadoEditado.IdCliente;
+                lavadoEditar.IdEmpleado = lavadoEditado.IdEmpleado;
+                lavadoEditar.Tipo = lavadoEditado.Tipo;
+                lavadoEditar.Precio = lavadoEditado.Precio;
+                lavadoEditar.IVA = lavadoEditado.IVA;
+                lavadoEditar.Estado = lavadoEditado.Estado;
+
                 return RedirectToAction(nameof(Index));
             }
             catch

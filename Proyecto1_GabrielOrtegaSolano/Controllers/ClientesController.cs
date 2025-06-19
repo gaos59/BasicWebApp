@@ -10,7 +10,7 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: ClientesController
         public ActionResult Index()
         {
-            return View();
+            return View(clientes);
         }
 
         // GET: ClientesController/Details/5
@@ -28,10 +28,11 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // POST: ClientesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Cliente clienteNuevo)
         {
             try
             {
+                clientes.Add(clienteNuevo);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -43,16 +44,33 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: ClientesController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            try
+            {
+                Cliente clienteEditar = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
+                return View(clienteEditar);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // POST: ClientesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Cliente clienteEditado)
         {
             try
             {
+                Cliente clienteEditar = clientes.FirstOrDefault(cliente => cliente.Identificacion == clienteEditado.Identificacion);
+                clienteEditar.Identificacion = clienteEditado.Identificacion;
+                clienteEditar.DireccionExacta = clienteEditado.DireccionExacta;
+                clienteEditar.Preferencia = clienteEditado.Preferencia;
+                clienteEditar.Provincia = clienteEditado.Provincia;
+                clienteEditar.Canton = clienteEditado.Canton;
+                clienteEditar.Distrito = clienteEditado.Distrito;
+                clienteEditar.Telefono = clienteEditado.Telefono;
                 return RedirectToAction(nameof(Index));
             }
             catch

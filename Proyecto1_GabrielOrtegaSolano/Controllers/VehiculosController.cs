@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Proyecto1_GabrielOrtegaSolano.Models;
 
 namespace Proyecto1_GabrielOrtegaSolano.Controllers
@@ -28,10 +29,11 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // POST: VehiculosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Vehiculo nuevoVehiculo)
         {
             try
             {
+                vehiculos.Add(nuevoVehiculo);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -41,18 +43,35 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         }
 
         // GET: VehiculosController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            try
+            {
+                Vehiculo vehiculoEditar = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
+                return View(vehiculoEditar);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }           
         }
 
         // POST: VehiculosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Vehiculo vehiculoEditado)
         {
             try
             {
+                Vehiculo vehiculoEditar = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == vehiculoEditado.Placa);
+                vehiculoEditar.Placa = vehiculoEditado.Placa;
+                vehiculoEditar.Marca = vehiculoEditado.Marca;
+                vehiculoEditar.Modelo = vehiculoEditado.Modelo;
+                vehiculoEditar.Traccion = vehiculoEditado.Traccion;
+                vehiculoEditar.Color = vehiculoEditado.Color;
+                vehiculoEditar.UltimaFechaAtencion = vehiculoEditado.UltimaFechaAtencion;
+                vehiculoEditar.TratamientoEspecial = vehiculoEditado.TratamientoEspecial;
                 return RedirectToAction(nameof(Index));
             }
             catch

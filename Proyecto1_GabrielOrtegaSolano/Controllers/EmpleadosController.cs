@@ -28,10 +28,11 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // POST: EmpleadosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Empleado nuevoEmpleado)
         {
             try
             {
+                empleados.Add(nuevoEmpleado);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -43,16 +44,33 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: EmpleadosController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            try
+            {
+                Empleado empleadoEditar = empleados.FirstOrDefault(empleado => empleado.Cedula == id);
+                return View(empleadoEditar);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // POST: EmpleadosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Empleado empleadoEditado)
         {
             try
             {
+                Empleado empleadoEditar = empleados.FirstOrDefault(empleado => empleado.Cedula == empleado.Cedula);
+                empleadoEditar.Cedula = empleadoEditado.Cedula;
+                empleadoEditar.FechaNacimiento = empleadoEditado.FechaNacimiento;
+                empleadoEditar.FechaIngreso = empleadoEditado.FechaIngreso;
+                empleadoEditar.FechaRetiro = empleadoEditado.FechaRetiro;
+                empleadoEditar.SalarioPorDia = empleadoEditado.SalarioPorDia;
+                empleadoEditar.DiasVacaciones = empleadoEditado.DiasVacaciones;
+                empleadoEditar.MontoLiquidacion = empleadoEditado.MontoLiquidacion;
                 return RedirectToAction(nameof(Index));
             }
             catch

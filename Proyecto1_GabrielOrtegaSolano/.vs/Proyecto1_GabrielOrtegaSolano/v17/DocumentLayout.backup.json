@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\proyecto1_gabrielortegasolano.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:proyecto1_gabrielortegasolano.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Proyecto1_GabrielOrtegaSolano",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Proyecto1_GabrielOrtegaSolano.csproj",
-              "RelativeDocumentMoniker": "Proyecto1_GabrielOrtegaSolano.csproj",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Proyecto1_GabrielOrtegaSolano.csproj",
-              "RelativeToolTip": "Proyecto1_GabrielOrtegaSolano.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-17T23:16:34.379Z",
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T00:21:27.1Z",
               "EditorCaption": ""
             }
           ]
