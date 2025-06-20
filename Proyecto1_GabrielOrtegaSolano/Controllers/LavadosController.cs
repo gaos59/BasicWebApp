@@ -10,7 +10,9 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: LavadosController
         public ActionResult Index()
         {
-            return View();
+            Lavado lavado = new Lavado();
+            if (!lavados.Any()) { lavados.Add(lavado); }
+            return View(lavados);
         }
 
         // GET: LavadosController/Details/5
@@ -32,6 +34,7 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                lavados.Remove(lavados.FirstOrDefault(lavado => lavado.IdLavado == 0));
                 lavados.Add(nuevoLavado);
                 return RedirectToAction(nameof(Index));
             }
@@ -70,7 +73,6 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
                 lavadoEditar.IdEmpleado = lavadoEditado.IdEmpleado;
                 lavadoEditar.Tipo = lavadoEditado.Tipo;
                 lavadoEditar.Precio = lavadoEditado.Precio;
-                lavadoEditar.IVA = lavadoEditado.IVA;
                 lavadoEditar.Estado = lavadoEditado.Estado;
 
                 return RedirectToAction(nameof(Index));

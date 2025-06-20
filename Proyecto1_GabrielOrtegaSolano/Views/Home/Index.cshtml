@@ -3,6 +3,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Bienvenido a Se lo Chaneo a Domicilio</h1>
+    <p>Seleccione una opción:</p>
+
+    <ul>
+        <li><a asp-controller="Empleados" asp-action="Index">Gestión de Empleados</a></li>
+        <li><a asp-controller="Vehiculos" asp-action="Index">Gestión de Vehículos</a></li>
+        <li><a asp-controller="Clientes" asp-action="Index">Gestión de Clientes</a></li>
+        <li><a asp-controller="Lavados" asp-action="Index">Gestión de Lavados</a></li>
+    </ul>
 </div>

@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Proyecto1_GabrielOrtegaSolano.Models.Lavado>
 
 @{
-    ViewData["Title"] = "Lavados";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Lavados</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -29,9 +29,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IVA)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
@@ -61,15 +58,12 @@
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IVA)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.IdLavado }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.IdLavado }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.IdLavado })
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }

@@ -11,7 +11,9 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: VehiculosController
         public ActionResult Index()
         {
-            return View();
+            Vehiculo vehiculo = new Vehiculo();
+            if (!vehiculos.Any()) { vehiculos.Add(vehiculo); }
+            return View(vehiculos);
         }
 
         // GET: VehiculosController/Details/5
@@ -33,6 +35,7 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                vehiculos.Remove(vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == null));
                 vehiculos.Add(nuevoVehiculo);
                 return RedirectToAction(nameof(Index));
             }

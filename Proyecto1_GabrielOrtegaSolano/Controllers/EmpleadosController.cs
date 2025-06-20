@@ -10,7 +10,9 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: EmpleadosController
         public ActionResult Index()
         {
-            return View();
+            Empleado empleado = new Empleado();
+            if (!empleados.Any()) { empleados.Add(empleado); }
+            return View(empleados);
         }
 
         // GET: EmpleadosController/Details/5
@@ -32,6 +34,7 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                empleados.Remove(empleados.FirstOrDefault(empleado => empleado.Cedula == 0));
                 empleados.Add(nuevoEmpleado);
                 return RedirectToAction(nameof(Index));
             }

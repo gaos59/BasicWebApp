@@ -15,7 +15,8 @@
         }
         public TipoLavado Tipo { get; set; }
         public double Precio { get; set; }
-        public double IVA { get; set; }
+        public const double IVA = 0.13;
+
         public enum EstadoLavado
         {
             EnProceso,

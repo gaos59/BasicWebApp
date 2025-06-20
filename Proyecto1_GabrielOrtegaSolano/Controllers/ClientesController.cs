@@ -10,7 +10,18 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: ClientesController
         public ActionResult Index()
         {
-            return View(clientes);
+            try
+            {
+                Cliente cliente = new Cliente();
+                if (!clientes.Any()) { clientes.Add(cliente); }
+                return View(clientes);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
+            
         }
 
         // GET: ClientesController/Details/5
@@ -32,6 +43,7 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                clientes.Remove(clientes.FirstOrDefault(cliente => cliente.Identificacion == 0));
                 clientes.Add(clienteNuevo);
                 return RedirectToAction(nameof(Index));
             }

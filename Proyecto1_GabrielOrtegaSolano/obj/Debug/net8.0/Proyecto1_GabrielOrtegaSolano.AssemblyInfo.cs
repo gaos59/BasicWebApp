@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto1_GabrielOrtegaSolano")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c4aebaf24938c5d8cb881677be5ec3e0a9ad715")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bbb1b83cd15810f1b4fc66ab74793c3cb230ce7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto1_GabrielOrtegaSolano")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proyecto1_GabrielOrtegaSolano")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
