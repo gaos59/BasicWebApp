@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\views\\vehiculos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:views\\vehiculos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\controllers\\lavadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:controllers\\lavadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\models\\lavado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:models\\lavado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\views\\lavados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:views\\lavados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto1_gabrielortegasolano\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|Proyecto1_GabrielOrtegaSolano.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +39,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T01:11:24.739Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Vehiculos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vehiculos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Vehiculos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Vehiculos\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T00:16:18.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA6AAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Empleados\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Empleados\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Empleados\\Index.cshtml",
+              "RelativeToolTip": "Views\\Empleados\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T01:09:47.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Clientes\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Clientes\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Clientes\\Create.cshtml",
-              "RelativeToolTip": "Views\\Clientes\\Create.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T01:08:29.05Z",
+              "WhenOpened": "2025-06-22T00:16:13.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Clientes\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Clientes\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Clientes\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Clientes\\Edit.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADYAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T01:08:27.012Z",
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\VehiculosController.cs",
+              "RelativeToolTip": "Controllers\\VehiculosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T00:13:25.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Lavado.cs",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Models\\Lavado.cs",
-              "RelativeDocumentMoniker": "Models\\Lavado.cs",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Models\\Lavado.cs",
-              "RelativeToolTip": "Models\\Lavado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LavadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\LavadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LavadosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\LavadosController.cs",
+              "RelativeToolTip": "Controllers\\LavadosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T00:56:27.999Z",
+              "WhenOpened": "2025-06-22T00:13:24.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Lavados\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Lavados\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Views\\Lavados\\Create.cshtml",
-              "RelativeToolTip": "Views\\Lavados\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T00:55:35.974Z",
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T00:13:19.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto1_GabrielOrtegaSolano\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T00:13:18.632Z",
               "EditorCaption": ""
             }
           ]

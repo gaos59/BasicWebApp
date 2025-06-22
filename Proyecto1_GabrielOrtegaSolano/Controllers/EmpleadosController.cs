@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Proyecto1_GabrielOrtegaSolano.Models;
 
 namespace Proyecto1_GabrielOrtegaSolano.Controllers
@@ -8,17 +9,46 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
     {
         private static List<Empleado> empleados = new List<Empleado>();
         // GET: EmpleadosController
-        public ActionResult Index()
+        public ActionResult Index(string filtro)
         {
+
             Empleado empleado = new Empleado();
             if (!empleados.Any()) { empleados.Add(empleado); }
-            return View(empleados);
+
+            var listaFiltrada = empleados;
+
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                listaFiltrada = empleados.Where(e =>e.Cedula.ToString().Contains(filtro)).ToList();
+            }
+
+
+
+            return View(listaFiltrada);
         }
 
         // GET: EmpleadosController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                Empleado empleadoDetalle = empleados.FirstOrDefault(empleado => empleado.Cedula == id);
+                if (empleadoDetalle == null)
+                {
+                    return NotFound();
+                }
+                return View(empleadoDetalle);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // GET: EmpleadosController/Create
@@ -85,7 +115,19 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: EmpleadosController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Empleado empleadoRemover = empleados.FirstOrDefault(empleado => empleado.Cedula == id);
+
+            if (empleadoRemover == null)
+            {
+                return NotFound();
+            }
+
+            return View(empleadoRemover);
         }
 
         // POST: EmpleadosController/Delete/5
@@ -95,11 +137,18 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                Empleado empleadoRemover = empleados.FirstOrDefault(empleado => empleado.Cedula == id);
+                if (empleadoRemover == null)
+                {
+                    return NotFound();
+                }
+
+                empleados.Remove(empleadoRemover);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View("Delete");
             }
         }
     }

@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +50,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Empleados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Empleados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Empleados/Edit.cshtml]
@@ -64,6 +80,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF2YWRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Lavados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF2YWRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Lavados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF2YWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Lavados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF2YWRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,6 +106,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Vehiculos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Vehiculos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Vehiculos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gorte/OneDrive/Documents/UNED/Programacion WEB Basica/BasicWebApp/Proyecto1_GabrielOrtegaSolano/Views/Vehiculos/Edit.cshtml]

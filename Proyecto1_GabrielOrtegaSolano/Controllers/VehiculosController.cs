@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Proyecto1_GabrielOrtegaSolano.Models;
 
@@ -9,17 +10,45 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
     {
         private static List<Vehiculo> vehiculos = new List<Vehiculo>();
         // GET: VehiculosController
-        public ActionResult Index()
+        public ActionResult Index(string filtro)
         {
             Vehiculo vehiculo = new Vehiculo();
             if (!vehiculos.Any()) { vehiculos.Add(vehiculo); }
-            return View(vehiculos);
+
+            var listaFiltrada = vehiculos;
+
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                listaFiltrada = vehiculos.Where(v => v.Marca.Contains(filtro) || v.Placa.Contains(filtro)).ToList();
+            }
+
+
+
+            return View(listaFiltrada);            
         }
 
         // GET: VehiculosController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                Vehiculo vehiculoDetalle = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
+                if (vehiculoDetalle == null)
+                {
+                    return NotFound();
+                }
+                return View(vehiculoDetalle);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // GET: VehiculosController/Create
@@ -84,23 +113,43 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         }
 
         // GET: VehiculosController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Vehiculo vehiculoRemover = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
+
+            if (vehiculoRemover == null)
+            {
+                return NotFound();
+            }
+
+            return View(vehiculoRemover);
         }
 
         // POST: VehiculosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(string id, IFormCollection collection)
         {
+
             try
             {
+                Vehiculo vehiculoRemover = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
+                if (vehiculoRemover == null)
+                {
+                    return NotFound();
+                }
+
+                vehiculos.Remove(vehiculoRemover);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View("Delete");
             }
         }
     }

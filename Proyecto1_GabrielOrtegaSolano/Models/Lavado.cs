@@ -3,7 +3,7 @@
     public class Lavado
     {
         public int IdLavado { get; set; }
-        public int PlacaVehiculo { get; set; }
+        public string PlacaVehiculo { get; set; }
         public int IdCliente { get; set; }
         public int IdEmpleado { get; set; }
         public enum TipoLavado

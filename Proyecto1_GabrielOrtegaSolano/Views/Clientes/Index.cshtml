@@ -5,7 +5,12 @@
 }
 
 <h1>Clientes</h1>
-
+<form asp-action="Index" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="filtro" class="form-control" placeholder="Buscar cliente..." />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+</form>
 <p>
     <a asp-action="Create">Create New</a>
 </p>

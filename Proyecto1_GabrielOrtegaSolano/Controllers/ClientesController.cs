@@ -8,26 +8,50 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
     {
         private static List<Cliente> clientes = new List<Cliente>();
         // GET: ClientesController
-        public ActionResult Index()
+        public ActionResult Index(string filtro)
         {
-            try
-            {
-                Cliente cliente = new Cliente();
-                if (!clientes.Any()) { clientes.Add(cliente); }
-                return View(clientes);
-            }
-            catch (Exception)
-            {
+            Cliente cliente = new Cliente();
+            if (!clientes.Any()) { clientes.Add(cliente); }
 
-                return View();
+            var listaFiltrada = clientes;
+
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                listaFiltrada = clientes
+                    .Where(c =>
+                        c.NombreCompleto.Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
+                        c.Identificacion.ToString().Contains(filtro)
+                    ).ToList();
             }
+
+
+
+            return View(listaFiltrada);
             
         }
 
         // GET: ClientesController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                Cliente clienteDetalle= clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
+                if (clienteDetalle == null)
+                {
+                    return NotFound();
+                }
+                return View(clienteDetalle);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // GET: ClientesController/Create
@@ -56,9 +80,17 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: ClientesController/Edit/5
         public ActionResult Edit(int id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
             try
             {
                 Cliente clienteEditar = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
+                if (clienteEditar == null)
+                {
+                    return NotFound();
+                }
                 return View(clienteEditar);
             }
             catch (Exception)
@@ -94,7 +126,19 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: ClientesController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Cliente clienteRemover = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
+
+            if (clienteRemover == null)
+            {
+                return NotFound();
+            }
+
+            return View(clienteRemover);
         }
 
         // POST: ClientesController/Delete/5
@@ -104,11 +148,18 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                Cliente clienteARemover = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
+                if (clienteARemover == null)
+                {
+                    return NotFound();
+                }
+
+                clientes.Remove(clienteARemover);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View("Delete");
             }
         }
     }

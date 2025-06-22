@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Proyecto1_GabrielOrtegaSolano.Models;
 
 namespace Proyecto1_GabrielOrtegaSolano.Controllers
@@ -8,17 +9,45 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
     {
         private static List<Lavado> lavados = new List<Lavado>();
         // GET: LavadosController
-        public ActionResult Index()
+        public ActionResult Index(string filtro)
         {
             Lavado lavado = new Lavado();
             if (!lavados.Any()) { lavados.Add(lavado); }
-            return View(lavados);
+
+            var listaFiltrada = lavados;
+
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                listaFiltrada = lavados.Where(l => l.IdLavado.ToString().Contains(filtro) || l.PlacaVehiculo.Contains(filtro)).ToList();
+            }
+
+
+
+            return View(listaFiltrada);
         }
 
         // GET: LavadosController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                Lavado lavadoDetalle = lavados.FirstOrDefault(lavado => lavado.IdLavado == id);
+                if (lavadoDetalle == null)
+                {
+                    return NotFound();
+                }
+                return View(lavadoDetalle);
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
         }
 
         // GET: LavadosController/Create
@@ -34,7 +63,7 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
-                lavados.Remove(lavados.FirstOrDefault(lavado => lavado.IdLavado == 0));
+                lavados.Remove(lavados.FirstOrDefault(lavado => lavado.PlacaVehiculo == null));
                 lavados.Add(nuevoLavado);
                 return RedirectToAction(nameof(Index));
             }
@@ -86,7 +115,19 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         // GET: LavadosController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Lavado lavadoRemover = lavados.FirstOrDefault(lavado => lavado.IdLavado == id);
+
+            if (lavadoRemover == null)
+            {
+                return NotFound();
+            }
+
+            return View(lavadoRemover);
         }
 
         // POST: LavadosController/Delete/5
@@ -96,11 +137,18 @@ namespace Proyecto1_GabrielOrtegaSolano.Controllers
         {
             try
             {
+                Lavado lavadoRemover = lavados.FirstOrDefault(lavado => lavado.IdLavado == id);
+                if (lavadoRemover == null)
+                {
+                    return NotFound();
+                }
+
+                lavados.Remove(lavadoRemover);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View("Delete");
             }
         }
     }
