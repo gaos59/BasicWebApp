@@ -1,0 +1,200 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4A8BA673-8E09-4A9A-80B0-CDBC0F1A28DB}|..\\ProyectoApiRest\\ProyectoApiRest.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyectoapirest\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A8BA673-8E09-4A9A-80B0-CDBC0F1A28DB}|..\\ProyectoApiRest\\ProyectoApiRest.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyectoapirest\\proyectoapirest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\proyectowebmvc.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:proyectowebmvc.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\controllers\\lavadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:controllers\\lavadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|c:\\users\\gorte\\onedrive\\documents\\uned\\programacion web basica\\basicwebapp\\proyecto2_gabrielortegasolano\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51ADEE8D-D25E-4C33-B270-8902DB867792}|ProyectoWebMVC.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T21:06:25.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProyectoWebMVC",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\ProyectoWebMVC.csproj",
+              "RelativeDocumentMoniker": "ProyectoWebMVC.csproj",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\ProyectoWebMVC.csproj",
+              "RelativeToolTip": "ProyectoWebMVC.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-06T21:05:46.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\ProyectoApiRest\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "..\\ProyectoApiRest\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\ProyectoApiRest\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "..\\ProyectoApiRest\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T20:54:49.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProyectoApiRest.csproj",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\ProyectoApiRest\\ProyectoApiRest.csproj",
+              "RelativeDocumentMoniker": "..\\ProyectoApiRest\\ProyectoApiRest.csproj",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\ProyectoApiRest\\ProyectoApiRest.csproj",
+              "RelativeToolTip": "..\\ProyectoApiRest\\ProyectoApiRest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-06T20:53:15.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Empleados\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Empleados\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Empleados\\Index.cshtml",
+              "RelativeToolTip": "Views\\Empleados\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T02:41:47.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\VehiculosController.cs",
+              "RelativeToolTip": "Controllers\\VehiculosController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T02:40:49.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LavadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\LavadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LavadosController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\LavadosController.cs",
+              "RelativeToolTip": "Controllers\\LavadosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T02:37:41.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Clientes\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Clientes\\Details.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Details.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAIBJwEEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T02:33:01.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Clientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Clientes\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Edit.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAIBJwDMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T02:31:43.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T02:30:03.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto2_GabrielOrtegaSolano\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowJwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T02:29:02.205Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
