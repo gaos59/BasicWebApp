@@ -3,52 +3,29 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Proyecto2_GabrielOrtegaSolano.Models;
+using ProyectoWebMVC.Datos;
 
 namespace Proyecto2_GabrielOrtegaSolano.Controllers
 {
     public class VehiculosController : Controller
     {
-        private static List<Vehiculo> vehiculos = new List<Vehiculo>();
+        private static Vehiculos servicio = new Vehiculos();
         // GET: VehiculosController
         public ActionResult Index(string filtro)
         {
-            Vehiculo vehiculo = new Vehiculo();
-            if (!vehiculos.Any()) { vehiculos.Add(vehiculo); }
+            var lista = string.IsNullOrEmpty(filtro)
+                ? servicio.ObtenerTodos()
+                : servicio.Buscar(filtro);
 
-            var listaFiltrada = vehiculos;
-
-
-            if (!string.IsNullOrEmpty(filtro))
-            {
-                listaFiltrada = vehiculos.Where(v => v.Marca.Contains(filtro) || v.Placa.Contains(filtro)).ToList();
-            }
-
-
-
-            return View(listaFiltrada);            
+            return View(lista);
         }
 
         // GET: VehiculosController/Details/5
         public ActionResult Details(string id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            try
-            {
-                Vehiculo vehiculoDetalle = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
-                if (vehiculoDetalle == null)
-                {
-                    return NotFound();
-                }
-                return View(vehiculoDetalle);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }
+            var vehiculo = servicio.BuscarPorPlaca(id);
+            if (vehiculo == null) return NotFound();
+            return View(vehiculo);
         }
 
         // GET: VehiculosController/Create
@@ -62,31 +39,16 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Vehiculo nuevoVehiculo)
         {
-            try
-            {
-                vehiculos.Remove(vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == null));
-                vehiculos.Add(nuevoVehiculo);
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            servicio.Crear(nuevoVehiculo);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: VehiculosController/Edit/5
         public ActionResult Edit(string id)
         {
-            try
-            {
-                Vehiculo vehiculoEditar = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
-                return View(vehiculoEditar);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }           
+            var vehiculo = servicio.BuscarPorPlaca(id);
+            if (vehiculo == null) return NotFound();
+            return View(vehiculo);
         }
 
         // POST: VehiculosController/Edit/5
@@ -94,40 +56,16 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Vehiculo vehiculoEditado)
         {
-            try
-            {
-                Vehiculo vehiculoEditar = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == vehiculoEditado.Placa);
-                vehiculoEditar.Placa = vehiculoEditado.Placa;
-                vehiculoEditar.Marca = vehiculoEditado.Marca;
-                vehiculoEditar.Modelo = vehiculoEditado.Modelo;
-                vehiculoEditar.Traccion = vehiculoEditado.Traccion;
-                vehiculoEditar.Color = vehiculoEditado.Color;
-                vehiculoEditar.UltimaFechaAtencion = vehiculoEditado.UltimaFechaAtencion;
-                vehiculoEditar.TratamientoEspecial = vehiculoEditado.TratamientoEspecial;
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            servicio.Editar(vehiculoEditado);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: VehiculosController/Delete/5
         public ActionResult Delete(string id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Vehiculo vehiculoRemover = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
-
-            if (vehiculoRemover == null)
-            {
-                return NotFound();
-            }
-
-            return View(vehiculoRemover);
+            var vehiculo = servicio.BuscarPorPlaca(id);
+            if (vehiculo == null) return NotFound();
+            return View(vehiculo);
         }
 
         // POST: VehiculosController/Delete/5
@@ -135,22 +73,8 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(string id, IFormCollection collection)
         {
-
-            try
-            {
-                Vehiculo vehiculoRemover = vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == id);
-                if (vehiculoRemover == null)
-                {
-                    return NotFound();
-                }
-
-                vehiculos.Remove(vehiculoRemover);
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View("Delete");
-            }
+            servicio.Eliminar(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

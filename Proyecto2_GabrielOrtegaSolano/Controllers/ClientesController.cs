@@ -1,57 +1,30 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Proyecto2_GabrielOrtegaSolano.Models;
+using ProyectoWebMVC.Datos;
 
 namespace Proyecto2_GabrielOrtegaSolano.Controllers
 {
     public class ClientesController : Controller
     {
-        private static List<Cliente> clientes = new List<Cliente>();
+        private static Clientes servicio = new Clientes();
         // GET: ClientesController
         public ActionResult Index(string filtro)
         {
-            Cliente cliente = new Cliente();
-            if (!clientes.Any()) { clientes.Add(cliente); }
+            var lista = string.IsNullOrEmpty(filtro)
+               ? servicio.ObtenerTodos()
+               : servicio.Buscar(filtro);
 
-            var listaFiltrada = clientes;
+            return View(lista);
 
-
-            if (!string.IsNullOrEmpty(filtro))
-            {
-                listaFiltrada = clientes
-                    .Where(c =>
-                        c.NombreCompleto.Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
-                        c.Identificacion.ToString().Contains(filtro)
-                    ).ToList();
-            }
-
-
-
-            return View(listaFiltrada);
-            
         }
 
         // GET: ClientesController/Details/5
         public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            try
-            {
-                Cliente clienteDetalle= clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
-                if (clienteDetalle == null)
-                {
-                    return NotFound();
-                }
-                return View(clienteDetalle);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }
+            var cliente = servicio.BuscarPorId(id);
+            if (cliente == null) return NotFound();
+            return View(cliente);
         }
 
         // GET: ClientesController/Create
@@ -65,39 +38,16 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Cliente clienteNuevo)
         {
-            try
-            {
-                clientes.Remove(clientes.FirstOrDefault(cliente => cliente.Identificacion == 0));
-                clientes.Add(clienteNuevo);
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            servicio.Crear(clienteNuevo);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: ClientesController/Edit/5
         public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            try
-            {
-                Cliente clienteEditar = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
-                if (clienteEditar == null)
-                {
-                    return NotFound();
-                }
-                return View(clienteEditar);
-            }
-            catch (Exception)
-            {
-
-                return View();
-            }
+            var cliente = servicio.BuscarPorId(id);
+            if (cliente == null) return NotFound();
+            return View(cliente);
         }
 
         // POST: ClientesController/Edit/5
@@ -105,40 +55,16 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Cliente clienteEditado)
         {
-            try
-            {
-                Cliente clienteEditar = clientes.FirstOrDefault(cliente => cliente.Identificacion == clienteEditado.Identificacion);
-                clienteEditar.Identificacion = clienteEditado.Identificacion;
-                clienteEditar.DireccionExacta = clienteEditado.DireccionExacta;
-                clienteEditar.Preferencia = clienteEditado.Preferencia;
-                clienteEditar.Provincia = clienteEditado.Provincia;
-                clienteEditar.Canton = clienteEditado.Canton;
-                clienteEditar.Distrito = clienteEditado.Distrito;
-                clienteEditar.Telefono = clienteEditado.Telefono;
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            servicio.Editar(clienteEditado);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: ClientesController/Delete/5
         public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Cliente clienteRemover = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
-
-            if (clienteRemover == null)
-            {
-                return NotFound();
-            }
-
-            return View(clienteRemover);
+            var cliente = servicio.BuscarPorId(id);
+            if (cliente == null) return NotFound();
+            return View(cliente);
         }
 
         // POST: ClientesController/Delete/5
@@ -146,21 +72,8 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
-            try
-            {
-                Cliente clienteARemover = clientes.FirstOrDefault(cliente => cliente.Identificacion == id);
-                if (clienteARemover == null)
-                {
-                    return NotFound();
-                }
-
-                clientes.Remove(clienteARemover);
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View("Delete");
-            }
+            servicio.Eliminar(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
