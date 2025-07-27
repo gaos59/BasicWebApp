@@ -14,8 +14,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="IdLavado" class="control-label"></label>
-                <input asp-for="IdLavado" class="form-control" />
-                <span asp-validation-for="IdLavado" class="text-danger"></span>
+                <p class="form-control-plaintext">@Model.IdLavado</p>
+                <input type="hidden" asp-for="IdLavado" />
             </div>
             <div class="form-group">
                 <label asp-for="PlacaVehiculo" class="control-label"></label>

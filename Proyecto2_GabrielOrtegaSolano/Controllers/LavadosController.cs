@@ -8,44 +8,61 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
 {
     public class LavadosController : Controller
     {
-        private static Lavados servicio = new Lavados();
-        // GET: LavadosController
-        public ActionResult Index(string filtro)
-        {
-            var lista = string.IsNullOrEmpty(filtro)
-                 ? servicio.ObtenerTodos()
-                 : servicio.Buscar(filtro);
+        private readonly HttpClient _http;
 
-            return View(lista);
+        public LavadosController(IHttpClientFactory httpClientFactory)
+        {
+            _http = httpClientFactory.CreateClient();
+            _http.BaseAddress = new Uri("http://localhost:5219");
+        }
+        // GET: LavadosController
+        public async Task<IActionResult> Index(string filtro)
+        {
+            List<Lavado> lavados = new();
+
+            if (string.IsNullOrEmpty(filtro))
+            {
+                lavados = await _http.GetFromJsonAsync<List<Lavado>>("api/lavados");
+            }
+            else
+            {
+                lavados = await _http.GetFromJsonAsync<List<Lavado>>($"api/lavados?filtro={filtro}");
+            }
+
+            return View(lavados);
         }
 
         // GET: LavadosController/Details/5
-        public ActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var lavado = servicio.BuscarPorId(id);
+            var lavado = await _http.GetFromJsonAsync<Lavado>($"api/lavados/{id}");
             if (lavado == null) return NotFound();
             return View(lavado);
         }
 
         // GET: LavadosController/Create
-        public ActionResult Create()
+        public IActionResult Create()
         {
             return View();
         }
 
+
         // POST: LavadosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Lavado nuevoLavado)
+        public async Task<IActionResult> Create(Lavado nuevoLavado)
         {
-            servicio.Crear(nuevoLavado);
-            return RedirectToAction(nameof(Index));
+            var response = await _http.PostAsJsonAsync("api/lavados", nuevoLavado);
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
+
+            return View(nuevoLavado);
         }
 
         // GET: LavadosController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var lavado = servicio.BuscarPorId(id);
+            var lavado = await _http.GetFromJsonAsync<Lavado>($"api/lavados/{id}");
             if (lavado == null) return NotFound();
             return View(lavado);
         }
@@ -53,27 +70,33 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         // POST: LavadosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Lavado lavadoEditado)
+        public async Task<IActionResult> Edit(Lavado lavadoEditado)
         {
-            servicio.Editar(lavadoEditado);
-            return RedirectToAction(nameof(Index));
+            var response = await _http.PutAsJsonAsync($"api/lavados/{lavadoEditado.IdLavado}", lavadoEditado);
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
+
+            return View(lavadoEditado);
         }
 
         // GET: LavadosController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var lavado = servicio.BuscarPorId(id);
+            var lavado = await _http.GetFromJsonAsync<Lavado>($"api/lavados/{id}");
             if (lavado == null) return NotFound();
             return View(lavado);
         }
 
         // POST: LavadosController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            servicio.Eliminar(id);
-            return RedirectToAction(nameof(Index));
+            var response = await _http.DeleteAsync($"api/lavados/{id}");
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
+
+            return View();
         }
     }
 }

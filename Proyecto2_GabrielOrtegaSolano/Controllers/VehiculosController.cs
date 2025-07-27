@@ -9,27 +9,44 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
 {
     public class VehiculosController : Controller
     {
-        private static Vehiculos servicio = new Vehiculos();
-        // GET: VehiculosController
-        public ActionResult Index(string filtro)
-        {
-            var lista = string.IsNullOrEmpty(filtro)
-                ? servicio.ObtenerTodos()
-                : servicio.Buscar(filtro);
+        private readonly HttpClient _http;
 
-            return View(lista);
+        public VehiculosController(IHttpClientFactory httpClientFactory)
+        {
+            _http = httpClientFactory.CreateClient();
+            _http.BaseAddress = new Uri("http://localhost:5219");
+        }
+        // GET: VehiculosController
+        public async Task<IActionResult> Index(string filtro)
+        {
+            List<Vehiculo> vehiculos = new();
+
+            if (string.IsNullOrEmpty(filtro))
+            {
+                vehiculos = await _http.GetFromJsonAsync<List<Vehiculo>>("api/vehiculos");
+            }
+            else
+            {
+                vehiculos = await _http.GetFromJsonAsync<List<Vehiculo>>($"api/vehiculos?filtro={filtro}");
+            }
+
+            return View(vehiculos);
         }
 
         // GET: VehiculosController/Details/5
-        public ActionResult Details(string id)
+        public async Task<IActionResult> Details(string id)
         {
-            var vehiculo = servicio.BuscarPorPlaca(id);
+            if (string.IsNullOrEmpty(id))
+            {
+                return BadRequest();
+            }
+            var vehiculo = await _http.GetFromJsonAsync<Vehiculo>($"api/vehiculos/{id}");
             if (vehiculo == null) return NotFound();
             return View(vehiculo);
         }
 
         // GET: VehiculosController/Create
-        public ActionResult Create()
+        public IActionResult Create()
         {
             return View();
         }
@@ -37,44 +54,63 @@ namespace Proyecto2_GabrielOrtegaSolano.Controllers
         // POST: VehiculosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Vehiculo nuevoVehiculo)
+        public async Task<IActionResult> Create(Vehiculo nuevoVehiculo)
         {
-            servicio.Crear(nuevoVehiculo);
-            return RedirectToAction(nameof(Index));
+            var response = await _http.PostAsJsonAsync("api/vehiculos", nuevoVehiculo);
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
+
+            return View(nuevoVehiculo);
         }
 
         // GET: VehiculosController/Edit/5
-        public ActionResult Edit(string id)
+        public async Task<IActionResult> Edit(string id)
         {
-            var vehiculo = servicio.BuscarPorPlaca(id);
+            if (string.IsNullOrEmpty(id))
+            {
+                return BadRequest();
+            }
+
+            var vehiculo = await _http.GetFromJsonAsync<Vehiculo>($"api/vehiculos/{id}");
             if (vehiculo == null) return NotFound();
+
             return View(vehiculo);
         }
 
         // POST: VehiculosController/Edit/5
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Vehiculo vehiculoEditado)
+        public async Task<IActionResult> Edit(Vehiculo vehiculoEditado)
         {
-            servicio.Editar(vehiculoEditado);
-            return RedirectToAction(nameof(Index));
+            var response = await _http.PutAsJsonAsync($"api/vehiculos/{vehiculoEditado.Placa}", vehiculoEditado);
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
+
+            return View(vehiculoEditado);
         }
 
         // GET: VehiculosController/Delete/5
-        public ActionResult Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
-            var vehiculo = servicio.BuscarPorPlaca(id);
+            if (string.IsNullOrEmpty(id))
+            {
+                return BadRequest();
+            }
+            var vehiculo = await _http.GetFromJsonAsync<Vehiculo>($"api/vehiculos/{id}");
             if (vehiculo == null) return NotFound();
             return View(vehiculo);
         }
 
         // POST: VehiculosController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(string id, IFormCollection collection)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            servicio.Eliminar(id);
-            return RedirectToAction(nameof(Index));
+            var response = await _http.DeleteAsync($"api/vehiculos/{id}");
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
+
+            return View();
         }
     }
 }
