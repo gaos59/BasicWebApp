@@ -1,65 +1,41 @@
-﻿using ProyectoWebMVC.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ProyectoApiRest.Datos;
+using ProyectoWebMVC.Models;
 
 namespace ProyectoApiRest.Servicios
 {
     public class VehiculoService : IVehiculoService
     {
-        private static List<Vehiculo> vehiculos = new List<Vehiculo>
+        private readonly DbContexto _context;
+
+        public VehiculoService(DbContexto context)
         {
-            new Vehiculo
-            {
-                Placa = "734577",
-                Marca = "Toyota",
-                Modelo = "Corolla",
-                Traccion = "4x2",
-                Color = "Rojo",
-                UltimaFechaAtencion = DateTime.Today.AddDays(-40),
-                TratamientoEspecial = true
-            },
-            new Vehiculo
-            {
-                Placa = "365785",
-                Marca = "Chevrolet",
-                Modelo = "Spark",
-                Traccion = "4x2",
-                Color = "Blanco",
-                UltimaFechaAtencion = DateTime.Today.AddDays(-20),
-                TratamientoEspecial = true
-            },
-            new Vehiculo
-            {
-                Placa = "868997",
-                Marca = "Mitsubishi",
-                Modelo = "Montero",
-                Traccion = "4x4",
-                Color = "Negro",
-                UltimaFechaAtencion = DateTime.Today.AddDays(-33),
-                TratamientoEspecial = true
-            }
-        };
+            _context = context;
+        }
 
         public List<Vehiculo> ObtenerTodos()
         {
-            return vehiculos;
+            return _context.Vehiculos.ToList();
         }
 
         public List<Vehiculo> Buscar(string filtro)
         {
-            return vehiculos.Where(v =>
-                (!string.IsNullOrEmpty(v.Placa) && v.Placa.Contains(filtro, StringComparison.OrdinalIgnoreCase)) ||
-                (!string.IsNullOrEmpty(v.Marca) && v.Marca.Contains(filtro, StringComparison.OrdinalIgnoreCase))
-            ).ToList();
+            return _context.Vehiculos
+                .Where(v =>
+                    (!string.IsNullOrEmpty(v.Placa) && v.Placa.Contains(filtro)) ||
+                    (!string.IsNullOrEmpty(v.Marca) && v.Marca.Contains(filtro))
+                ).ToList();
         }
 
         public Vehiculo BuscarPorPlaca(string placa)
         {
-            return vehiculos.FirstOrDefault(v => v.Placa == placa);
+            return _context.Vehiculos.FirstOrDefault(v => v.Placa == placa);
         }
 
         public void Crear(Vehiculo nuevo)
         {
-            vehiculos.Remove(vehiculos.FirstOrDefault(vehiculo => vehiculo.Placa == null || vehiculo.Placa == ""));
-            vehiculos.Add(nuevo);
+            _context.Vehiculos.Add(nuevo);
+            _context.SaveChanges();
         }
 
         public void Editar(Vehiculo actualizado)
@@ -73,6 +49,8 @@ namespace ProyectoApiRest.Servicios
                 vehiculo.Color = actualizado.Color;
                 vehiculo.UltimaFechaAtencion = actualizado.UltimaFechaAtencion;
                 vehiculo.TratamientoEspecial = actualizado.TratamientoEspecial;
+
+                _context.SaveChanges();
             }
         }
 
@@ -81,7 +59,8 @@ namespace ProyectoApiRest.Servicios
             var vehiculo = BuscarPorPlaca(placa);
             if (vehiculo != null)
             {
-                vehiculos.Remove(vehiculo);
+                _context.Vehiculos.Remove(vehiculo);
+                _context.SaveChanges();
             }
         }
     }

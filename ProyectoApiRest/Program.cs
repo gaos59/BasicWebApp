@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using ProyectoApiRest.Servicios;
+using ProyectoApiRest.Datos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,11 +10,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IClienteService, ClienteService>();
-builder.Services.AddSingleton<IEmpleadoService, EmpleadoService>();
-builder.Services.AddSingleton<IVehiculoService, VehiculoService>();
-builder.Services.AddSingleton<ILavadoService, LavadoService>();
-builder.Services.AddSingleton<IReporteService, ReporteService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IEmpleadoService, EmpleadoService>();
+builder.Services.AddScoped<IVehiculoService, VehiculoService>();
+builder.Services.AddScoped<ILavadoService, LavadoService>();
+builder.Services.AddScoped<IReporteService, ReporteService>();
+builder.Services.AddDbContext<DbContexto>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSQL")));
 
 var app = builder.Build();
 

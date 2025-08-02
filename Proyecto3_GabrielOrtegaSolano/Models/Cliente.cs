@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Primitives;
-
-namespace ProyectoWebMVC.Models
+﻿namespace ProyectoWebMVC.Models
 {
     public class Cliente
     {

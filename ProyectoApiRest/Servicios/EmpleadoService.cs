@@ -1,64 +1,39 @@
-﻿using ProyectoWebMVC.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ProyectoApiRest.Datos;
+using ProyectoWebMVC.Models;
 
 namespace ProyectoApiRest.Servicios
 {
     public class EmpleadoService : IEmpleadoService
     {
-        private static List<Empleado> empleados = new List<Empleado>
+        private readonly DbContexto _context;
+
+        public EmpleadoService(DbContexto context)
         {
-            new Empleado
-            {
-                Cedula = 14435567,
-                FechaNacimiento = new DateTime(1990, 1, 1),
-                FechaIngreso = DateTime.Today.AddYears(-2),
-                SalarioPorDia = 20000,
-                DiasVacaciones = 10,
-                FechaRetiro = DateTime.Today.AddYears(+2),
-                MontoLiquidacion = 865785
-            },
-            new Empleado
-            {
-                Cedula = 343255534,
-                FechaNacimiento = new DateTime(1998, 1, 1),
-                FechaIngreso = DateTime.Today.AddYears(-4),
-                SalarioPorDia = 20000,
-                DiasVacaciones = 10,
-                FechaRetiro = DateTime.Today.AddYears(+2),
-                MontoLiquidacion = 567577
-            },
-            new Empleado
-            {
-                Cedula = 566744576,
-                FechaNacimiento = new DateTime(1985, 1, 1),
-                FechaIngreso = DateTime.Today.AddYears(-10),
-                SalarioPorDia = 20000,
-                DiasVacaciones = 10,
-                FechaRetiro = DateTime.Today.AddYears(+6),
-                MontoLiquidacion = 4078065
-            }
-        };
+            _context = context;
+        }
 
         public List<Empleado> ObtenerTodos()
         {
-            return empleados;
+            return _context.Empleados.ToList();
         }
 
         public List<Empleado> Buscar(string filtro)
         {
-            return empleados.Where(e =>
-                e.Cedula.ToString().Contains(filtro)
-            ).ToList();
+            return _context.Empleados
+                .Where(e => e.Cedula.ToString().Contains(filtro))
+                .ToList();
         }
 
         public Empleado BuscarPorId(int id)
         {
-            return empleados.FirstOrDefault(e => e.Cedula == id);
+            return _context.Empleados.FirstOrDefault(e => e.Cedula == id);
         }
 
         public void Crear(Empleado nuevo)
         {
-            empleados.Remove(empleados.FirstOrDefault(empleado => empleado.Cedula == 0));
-            empleados.Add(nuevo);
+            _context.Empleados.Add(nuevo);
+            _context.SaveChanges();
         }
 
         public void Editar(Empleado actualizado)
@@ -72,6 +47,8 @@ namespace ProyectoApiRest.Servicios
                 empleado.SalarioPorDia = actualizado.SalarioPorDia;
                 empleado.DiasVacaciones = actualizado.DiasVacaciones;
                 empleado.MontoLiquidacion = actualizado.MontoLiquidacion;
+
+                _context.SaveChanges();
             }
         }
 
@@ -80,7 +57,8 @@ namespace ProyectoApiRest.Servicios
             var empleado = BuscarPorId(id);
             if (empleado != null)
             {
-                empleados.Remove(empleado);
+                _context.Empleados.Remove(empleado);
+                _context.SaveChanges();
             }
         }
     }

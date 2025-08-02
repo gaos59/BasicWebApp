@@ -1,38 +1,43 @@
-﻿using ProyectoWebMVC.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ProyectoApiRest.Datos;
+using ProyectoWebMVC.Models;
+using System;
 
 namespace ProyectoApiRest.Servicios
 {
     public class ClienteService : IClienteService
     {
-        private static List<Cliente> clientes = new List<Cliente>
+        private DbContexto _context;
+
+        public ClienteService(DbContexto context)
         {
-            new Cliente { Identificacion = 23425656, NombreCompleto = "Federico Alvarado Perez" },
-            new Cliente {Identificacion = 343255534, NombreCompleto = "Jose Ramirez Ulloa" },
-            new Cliente {Identificacion = 566744576, NombreCompleto = "Patricia Gomez Ruiz" }
-        };
+            _context = context;
+        }
 
         public List<Cliente> ObtenerTodos()
         {
-            return clientes;
+            return _context.Clientes.ToList();
         }
 
         public List<Cliente> Buscar(string filtro)
         {
-            return clientes.Where(c =>
-                c.NombreCompleto.Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
-                c.Identificacion.ToString().Contains(filtro)
-            ).ToList();
+            return _context.Clientes
+                .Where(c =>
+                    c.NombreCompleto.Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
+                    c.Identificacion.ToString().Contains(filtro)
+                )
+                .ToList();
         }
 
         public Cliente BuscarPorId(int id)
         {
-            return clientes.FirstOrDefault(c => c.Identificacion == id);
+            return _context.Clientes.FirstOrDefault(c => c.Identificacion == id);
         }
 
         public void Crear(Cliente nuevo)
         {
-            clientes.Remove(clientes.FirstOrDefault(cliente => cliente.Identificacion == 0));
-            clientes.Add(nuevo);
+            _context.Clientes.Add(nuevo);
+            _context.SaveChanges();
         }
 
         public void Editar(Cliente actualizado)
@@ -47,6 +52,8 @@ namespace ProyectoApiRest.Servicios
                 cliente.DireccionExacta = actualizado.DireccionExacta;
                 cliente.Telefono = actualizado.Telefono;
                 cliente.Preferencia = actualizado.Preferencia;
+
+                _context.SaveChanges();
             }
         }
 
@@ -55,7 +62,8 @@ namespace ProyectoApiRest.Servicios
             var cliente = BuscarPorId(id);
             if (cliente != null)
             {
-                clientes.Remove(cliente);
+                _context.Clientes.Remove(cliente);
+                _context.SaveChanges();
             }
         }
     }

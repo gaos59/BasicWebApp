@@ -1,22 +1,22 @@
-﻿using ProyectoWebMVC.Models;
+﻿using ProyectoApiRest.Datos;
+using ProyectoWebMVC.Models;
 
 namespace ProyectoApiRest.Servicios
 {
     public class ReporteService : IReporteService
     {
-        private readonly IVehiculoService _vehiculoService;
+        private readonly DbContexto _context;
 
-        public ReporteService(IVehiculoService vehiculoService)
+        public ReporteService(DbContexto context)
         {
-            _vehiculoService = vehiculoService;
+            _context = context;
         }
 
         public List<Vehiculo> ObtenerVehiculosSinLavadoPorMasDeUnMes()
         {
-            var todos = _vehiculoService.ObtenerTodos();
             var limite = DateTime.Today.AddDays(-30);
 
-            return todos
+            return _context.Vehiculos
                 .Where(v => v.UltimaFechaAtencion < limite)
                 .ToList();
         }

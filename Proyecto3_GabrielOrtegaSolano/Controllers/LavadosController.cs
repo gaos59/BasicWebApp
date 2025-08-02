@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.Elfie.Serialization;
-using ProyectoWebMVC.Models;
 using ProyectoWebMVC.Datos;
+using ProyectoWebMVC.Models;
+using System.Reflection;
 
 namespace ProyectoWebMVC.Controllers
 {
@@ -41,22 +43,48 @@ namespace ProyectoWebMVC.Controllers
         }
 
         // GET: LavadosController/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var viewModel = new LavadoViewModel();
+
+            // Obtener los datos existentes
+            var vehiculos = await _http.GetFromJsonAsync<List<Vehiculo>>("api/vehiculos");
+            var clientes = await _http.GetFromJsonAsync<List<Cliente>>("api/clientes");
+            var empleados = await _http.GetFromJsonAsync<List<Empleado>>("api/empleados");
+
+            // Crear SelectLists
+            viewModel.Vehiculos = vehiculos.Select(v => new SelectListItem
+            {
+                Value = v.Placa,
+                Text = $"{v.Placa} - {v.Marca} {v.Modelo}"
+            }).ToList();
+
+            viewModel.Clientes = clientes.Select(c => new SelectListItem
+            {
+                Value = c.Identificacion.ToString(),
+                Text = c.NombreCompleto
+            }).ToList();
+
+            viewModel.Empleados = empleados.Select(e => new SelectListItem
+            {
+                Value = e.Cedula.ToString(),
+                Text = e.Cedula.ToString()
+            }).ToList();
+
+            return View(viewModel);
         }
 
 
         // POST: LavadosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Lavado nuevoLavado)
+        public async Task<IActionResult> Create(LavadoViewModel model)
         {
-            var response = await _http.PostAsJsonAsync("api/lavados", nuevoLavado);
+            var response = await _http.PostAsJsonAsync("api/lavados", model.Lavado);
             if (response.IsSuccessStatusCode)
                 return RedirectToAction(nameof(Index));
 
-            return View(nuevoLavado);
+            return View(model);
         }
 
         // GET: LavadosController/Edit/5

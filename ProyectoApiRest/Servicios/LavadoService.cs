@@ -1,66 +1,43 @@
-﻿using ProyectoWebMVC.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ProyectoApiRest.Datos;
+using ProyectoWebMVC.Models;
 using static ProyectoWebMVC.Models.Lavado;
 
 namespace ProyectoApiRest.Servicios
 {
     public class LavadoService : ILavadoService
     {
-        private static List<Lavado> lavados = new List<Lavado>
+        private readonly DbContexto _context;
+
+        public LavadoService(DbContexto context)
         {
-            new Lavado
-            {
-                IdLavado = 7,
-                PlacaVehiculo = "534536",
-                IdCliente = 101457455,
-                IdEmpleado = 575685658,
-                Tipo = TipoLavado.Lajoya,
-                Precio = 8000,
-                Estado = EstadoLavado.EnProceso
-            },
-            new Lavado
-            {
-                IdLavado = 4,
-                PlacaVehiculo = "765476",
-                IdCliente = 101457455,
-                IdEmpleado = 575685658,
-                Tipo = TipoLavado.Premium,
-                Precio = 10000,
-                Estado = EstadoLavado.Agendado
-            },
-            new Lavado
-            {
-                IdLavado = 2,
-                PlacaVehiculo = "859876",
-                IdCliente = 101457455,
-                IdEmpleado = 575685658,
-                Tipo = TipoLavado.Basico,
-                Precio = 4000,
-                Estado = EstadoLavado.Facturado
-            }
-        };
+            _context = context;
+        }
 
         public List<Lavado> ObtenerTodos()
         {
-            return lavados;
+            return _context.Lavados.ToList();
         }
 
         public List<Lavado> Buscar(string filtro)
         {
-            return lavados.Where(l =>
-                l.IdLavado.ToString().Contains(filtro) ||
-                (!string.IsNullOrEmpty(l.PlacaVehiculo) && l.PlacaVehiculo.Contains(filtro, StringComparison.OrdinalIgnoreCase))
-            ).ToList();
+            return _context.Lavados
+                .Where(l =>
+                    l.IdLavado.ToString().Contains(filtro) ||
+                    (!string.IsNullOrEmpty(l.PlacaVehiculo) && l.PlacaVehiculo.Contains(filtro))
+                )
+                .ToList();
         }
 
         public Lavado BuscarPorId(int id)
         {
-            return lavados.FirstOrDefault(l => l.IdLavado == id);
+            return _context.Lavados.FirstOrDefault(l => l.IdLavado == id);
         }
 
         public void Crear(Lavado nuevo)
         {
-            lavados.Remove(lavados.FirstOrDefault(lavado => lavado.PlacaVehiculo == null));
-            lavados.Add(nuevo);
+            _context.Lavados.Add(nuevo);
+            _context.SaveChanges();
         }
 
         public void Editar(Lavado actualizado)
@@ -74,6 +51,8 @@ namespace ProyectoApiRest.Servicios
                 lavado.Tipo = actualizado.Tipo;
                 lavado.Precio = actualizado.Precio;
                 lavado.Estado = actualizado.Estado;
+
+                _context.SaveChanges();
             }
         }
 
@@ -82,7 +61,8 @@ namespace ProyectoApiRest.Servicios
             var lavado = BuscarPorId(id);
             if (lavado != null)
             {
-                lavados.Remove(lavado);
+                _context.Lavados.Remove(lavado);
+                _context.SaveChanges();
             }
         }
     }
