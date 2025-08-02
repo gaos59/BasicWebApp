@@ -1,0 +1,31 @@
+﻿@model List<ProyectoWebMVC.Models.Vehiculo>
+
+@{
+    ViewData["Title"] = "Vehículos sin lavado (más de 30 días)";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Última Fecha de Atención</th>
+            <th>Tratamiento Especial</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.Placa</td>
+                <td>@v.Marca</td>
+                <td>@v.Modelo</td>
+                <td>@v.UltimaFechaAtencion.ToString("yyyy-MM-dd")</td>
+                <td>@(v.TratamientoEspecial ? "Sí" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>

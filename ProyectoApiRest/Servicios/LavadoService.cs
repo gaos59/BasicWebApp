@@ -1,5 +1,5 @@
-﻿using Proyecto2_GabrielOrtegaSolano.Models;
-using static Proyecto2_GabrielOrtegaSolano.Models.Lavado;
+﻿using ProyectoWebMVC.Models;
+using static ProyectoWebMVC.Models.Lavado;
 
 namespace ProyectoApiRest.Servicios
 {

@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Proyecto2_GabrielOrtegaSolano.Models.Cliente, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoWebMVC.Models.Cliente, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,13 +35,13 @@
     "Parameters": [
       {
         "Name": "nuevo",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Cliente",
+        "Type": "ProyectoWebMVC.Models.Cliente",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Cliente",
+        "Type": "ProyectoWebMVC.Models.Cliente",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -67,7 +67,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Cliente",
+        "Type": "ProyectoWebMVC.Models.Cliente",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -92,7 +92,7 @@
       },
       {
         "Name": "actualizado",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Cliente",
+        "Type": "ProyectoWebMVC.Models.Cliente",
         "IsRequired": true
       }
     ],
@@ -130,7 +130,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Proyecto2_GabrielOrtegaSolano.Models.Empleado, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoWebMVC.Models.Empleado, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -150,13 +150,13 @@
     "Parameters": [
       {
         "Name": "nuevo",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Empleado",
+        "Type": "ProyectoWebMVC.Models.Empleado",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Empleado",
+        "Type": "ProyectoWebMVC.Models.Empleado",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -182,7 +182,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Empleado",
+        "Type": "ProyectoWebMVC.Models.Empleado",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -207,7 +207,7 @@
       },
       {
         "Name": "actualizado",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Empleado",
+        "Type": "ProyectoWebMVC.Models.Empleado",
         "IsRequired": true
       }
     ],
@@ -245,7 +245,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Proyecto2_GabrielOrtegaSolano.Models.Lavado, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoWebMVC.Models.Lavado, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -265,13 +265,13 @@
     "Parameters": [
       {
         "Name": "nuevo",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Lavado",
+        "Type": "ProyectoWebMVC.Models.Lavado",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Lavado",
+        "Type": "ProyectoWebMVC.Models.Lavado",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -297,7 +297,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Lavado",
+        "Type": "ProyectoWebMVC.Models.Lavado",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -322,7 +322,7 @@
       },
       {
         "Name": "actualizado",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Lavado",
+        "Type": "ProyectoWebMVC.Models.Lavado",
         "IsRequired": true
       }
     ],
@@ -354,7 +354,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Proyecto2_GabrielOrtegaSolano.Models.Vehiculo, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoWebMVC.Models.Vehiculo, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -380,7 +380,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Proyecto2_GabrielOrtegaSolano.Models.Vehiculo, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoWebMVC.Models.Vehiculo, ProyectoWebMVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -400,13 +400,13 @@
     "Parameters": [
       {
         "Name": "nuevo",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Vehiculo",
+        "Type": "ProyectoWebMVC.Models.Vehiculo",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Vehiculo",
+        "Type": "ProyectoWebMVC.Models.Vehiculo",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -432,7 +432,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Vehiculo",
+        "Type": "ProyectoWebMVC.Models.Vehiculo",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -457,7 +457,7 @@
       },
       {
         "Name": "actualizado",
-        "Type": "Proyecto2_GabrielOrtegaSolano.Models.Vehiculo",
+        "Type": "ProyectoWebMVC.Models.Vehiculo",
         "IsRequired": true
       }
     ],

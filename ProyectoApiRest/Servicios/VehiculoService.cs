@@ -1,4 +1,4 @@
-﻿using Proyecto2_GabrielOrtegaSolano.Models;
+﻿using ProyectoWebMVC.Models;
 
 namespace ProyectoApiRest.Servicios
 {

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ProyectoWebMVC.Models.Lavado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-action="Index" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="filtro" class="form-control" placeholder="Buscar cliente..." />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+</form>
+<p>
+    <form asp-action="Create" method="get" class="mb-3">
+        <div class="input-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdLavado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacaVehiculo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdLavado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaVehiculo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdLavado }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IdLavado }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdLavado })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

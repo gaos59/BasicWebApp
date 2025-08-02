@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Proyecto2_GabrielOrtegaSolano.Models;
+using ProyectoWebMVC.Models;
 using ProyectoApiRest.Servicios;
 
 namespace ProyectoApiRest.Controllers

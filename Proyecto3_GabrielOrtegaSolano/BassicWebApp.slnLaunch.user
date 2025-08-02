@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "ProyectoWebMVC.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\ProyectoApiRest\\ProyectoApiRest.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

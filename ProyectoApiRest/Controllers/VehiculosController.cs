@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Proyecto2_GabrielOrtegaSolano.Models;
+using ProyectoWebMVC.Models;
 using ProyectoApiRest.Servicios;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
