@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ProyectoApiRest.Servicios;
+using Microsoft.OpenApi.Models;
 using ProyectoApiRest.Datos;
+using ProyectoApiRest.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "ProyectoApiRest",
+        Version = "v1"
+    });
+});
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<IEmpleadoService, EmpleadoService>();
 builder.Services.AddScoped<IVehiculoService, VehiculoService>();
@@ -24,8 +32,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProyectoApiRest v1");
+    });
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

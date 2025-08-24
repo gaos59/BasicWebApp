@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Proyecto3_GabrielOrtegaSolano\ProyectoWebMVC.csproj" />
+    <ProjectReference Include="..\ProyectoWebMVC\ProyectoWebMVC.csproj" />
   </ItemGroup>
 
 </Project>

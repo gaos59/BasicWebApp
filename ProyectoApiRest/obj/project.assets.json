@@ -7927,8 +7927,8 @@
     },
     "ProyectoWebMVC/1.0.0": {
       "type": "project",
-      "path": "../Proyecto3_GabrielOrtegaSolano/ProyectoWebMVC.csproj",
-      "msbuildProject": "../Proyecto3_GabrielOrtegaSolano/ProyectoWebMVC.csproj"
+      "path": "../ProyectoWebMVC/ProyectoWebMVC.csproj",
+      "msbuildProject": "../ProyectoWebMVC/ProyectoWebMVC.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7971,8 +7971,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto3_GabrielOrtegaSolano\\ProyectoWebMVC.csproj": {
-              "projectPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\Proyecto3_GabrielOrtegaSolano\\ProyectoWebMVC.csproj"
+            "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\ProyectoWebMVC\\ProyectoWebMVC.csproj": {
+              "projectPath": "C:\\Users\\Gorte\\OneDrive\\Documents\\UNED\\Programacion WEB Basica\\BasicWebApp\\ProyectoWebMVC\\ProyectoWebMVC.csproj"
             }
           }
         }
